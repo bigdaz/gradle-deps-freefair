@@ -1,3 +1,16 @@
 plugins {
   id "io.freefair.github.dependency-submission" version "6.6.3"
 }
+
+github {
+    slug 
+    username = "bigdaz"
+    token = ""
+    tag = 'HEAD' 
+}
+
+tasks.named("githubDependencySnapshot").configure {
+    jobId = "12345"
+    jobCorrelator = "DAZ_TEST_gradle-deps-freefair"
+    jobHtmlUrl = "https://github.com/bigdaz/gradle-deps-freefair"
+}
