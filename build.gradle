@@ -5,7 +5,7 @@ plugins {
 github {
     slug 
     username = "bigdaz"
-    token = ""
+    token = System.getenv("GITHUB_TOKEN")
     tag = 'HEAD' 
 }
 
